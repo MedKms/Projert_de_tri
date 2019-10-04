@@ -72,6 +72,26 @@ void tri_shell(int tableau[],int longueur)
              }
          }
      };
+void tri_rapide (int *tableau, int taille) {
+    int mur, courant, pivot, tmp;
+    if (taille < 2) return;
+    // On prend comme pivot l element le plus a droite
+    pivot = tableau[taille - 1];
+    mur  = courant = 0;
+    while (courant<taille) {
+        if (tableau[courant] <= pivot) {
+            if (mur != courant) {
+                tmp=tableau[courant];
+                tableau[courant]=tableau[mur];
+                tableau[mur]=tmp;              
+            }
+            mur ++;
+        }
+        courant ++;
+    }
+    tri_rapide(tableau, mur - 1);
+    tri_rapide(tableau + mur - 1, taille - mur + 1);
+}
 float getTemps(void (*pftc)(int*,int),int *t,int n)
 {
      float temp;

@@ -5,6 +5,7 @@ void tri_insertion(int*,int);
 void tri_selection(int*,int);
 void tri_Bulle(int*,int);
 void tri_shell(int *,int );
+void tri_rapide (int*,int);
 void affecter(int*,int*,int);
 float getTemps(void (*pftc)(int*,int),int*,int);
 void remplire(int*,int);

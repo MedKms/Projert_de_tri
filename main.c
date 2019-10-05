@@ -23,7 +23,7 @@ int main(int argc, char *argv[]) {
 	    }
 	    printf("%d    ",i);
 	}
-	f=fopen("C:\\Users\\G\\Desktop\\Dossier\\Mini_Projet(MOHAMED & SADIKI)\\data1.txt","w");
+	f=fopen("C:\\Users\\G\\Desktop\\Dossier\\Mini_Projet(MOHAMED & SADIKI)\\data2.txt","w");
 	for(i=0;i<NTaille/1000;i++)
 	{
 		fprintf(f,"%d\t",(i+1)*1000);

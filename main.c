@@ -7,27 +7,29 @@
 
 int main(int argc, char *argv[]) {
 	FILE *f;
-	void (*ptr[])(int*,int)={tri_Bulle,tri_insertion,tri_selection,tri_shell,tri_rapide,tri_permutation};
+	void (*ptr[])(int*,int)={tri_Bulle,tri_insertion,tri_selection,tri_shell,tri_rapide,tri_permutation,tri_fusion};
 	int i,j,k=0,*t,*a;
-	float Table[NTaille/1000][6];
+	float Table[NTaille/1000][7];
 	for(i=1000;i<=NTaille;i+=1000,k++)
 	{
 		t=(int *)malloc(i*sizeof(int));
 		a=(int *)malloc(i*sizeof(int));
 		remplire(t,i);
 		affecter(t,a,i);
-		for(j=0;j<6;j++)
+		for(j=0;j<7;j++)
 		{
 		Table[k][j]=getTemps(ptr[j],a,i);
 		affecter(t,a,i);
 	    }
 	    printf("%d    ",i);
+	    free(t);
+	    free(a);
 	}
-	f=fopen("C:\\Users\\G\\Desktop\\Dossier\\Mini_Projet(MOHAMED & SADIKI)\\data2.txt","w");
+	f=fopen("C:\\Users\\G\\Desktop\\Dossier\\Mini_Projet(MOHAMED & SADIKI)\\data.txt","w");
 	for(i=0;i<NTaille/1000;i++)
 	{
 		fprintf(f,"%d\t",(i+1)*1000);
-		for(j=0;j<6;j++)
+		for(j=0;j<7;j++)
 		fprintf(f,"%f\t",Table[i][j]);
 		fprintf(f,"\n");
 	}

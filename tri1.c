@@ -178,7 +178,7 @@ float getTemps(void (*pftc)(int*,int),int *t,int n)
      end=clock();
      temp=(float)(end-start)/1000;
      return temp;
-};   
+}; 
 void remplire(int *t,int n)
 {
 	int i;

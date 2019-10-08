@@ -25,7 +25,7 @@ int main(int argc, char *argv[]) {
 	    free(t);
 	    free(a);
 	}
-	f=fopen("C:\\Users\\G\\Desktop\\Dossier\\Mini_Projet(MOHAMED & SADIKI)\\data.txt","w");
+	f=fopen("C:\\Users\\G\\Desktop\\Dossier\\Mini_Projet(MOHAMED & SADIKI)\\data1.txt","w");
 	for(i=0;i<NTaille/1000;i++)
 	{
 		fprintf(f,"%d\t",(i+1)*1000);

@@ -1,5 +1,5 @@
 #ifndef ___Tri1_H____
-#define NTaille 100000
+#define NumTaille 100000
 void affiche(int *,int);
 void tri_insertion(int*,int);
 void tri_selection(int*,int);
